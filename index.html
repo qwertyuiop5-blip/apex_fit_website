@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexFit</title>
 
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="logo">APEXFIT</div>
+  <div>
+    <a class="active" onclick="showPage('home')">Home</a>
+    <a onclick="showPage('workouts')">Workouts</a>
+    <a onclick="showPage('bmi')">BMI</a>
+    <a onclick="showPage('classes')">Classes</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <h1>Build Your <span style="color:#F5C800">Best Self</span></h1>
+  <p>Workout plans, live classes, and BMI tracking — all in one place.</p>
+  <button onclick="showPage('workouts')">Start Training</button>
+  <button class="outline" onclick="showPage('bmi')">Check BMI</button>
+</div>
+
+<!-- WORKOUTS -->
+<div id="workouts" class="page">
+  <h2>Workout Plans</h2>
+</div>
+
+<!-- BMI -->
+<div id="bmi" class="page">
+  <h2>BMI Calculator</h2>
+
+  <label>Weight (kg)</label>
+  <input type="number" id="weight" value="70" oninput="calcBMI()">
+
+  <label>Height (cm)</label>
+  <input type="number" id="height" value="175" oninput="calcBMI()">
+
+  <div class="bmi-result">
+    <div class="bmi-num" id="bmi-num">22.9</div>
+    <div class="bmi-cat" id="bmi-cat">Normal weight</div>
+    <div class="bmi-tip" id="bmi-tip">Your BMI is within a healthy range.</div>
+  </div>
+</div>
+
+<!-- CLASSES -->
+<div id="classes" class="page">
+  <h2>Class Timetable</h2>
+  <div class="day-tabs"></div>
+  <div id="class-list"></div>
+</div>
+
+<!-- Link JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
